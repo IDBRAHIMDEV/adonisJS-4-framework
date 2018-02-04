@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Adonis js 4</title>
+    {{ css('css/bootstrap.min.css') }}
+
+    @!section('stylesheets')
+</head>
+<body>
+
+@include('inc/navbar')
+    <div class="container">
+        @!section('content')
+    </div>
+   
+
+    {{ script('js/jquery.min.js') }}
+    {{ script('js/popper.min.js') }}
+    {{ script('js/bootstrap.min.js') }}
+
+    @!section('javascripts')
+</body>
+</html>

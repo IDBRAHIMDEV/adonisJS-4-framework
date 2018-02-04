@@ -1,0 +1,31 @@
+
+@layout('master')
+
+
+@section('content')
+
+   <h1>edit post</h1>
+    
+    <div class="row">
+        <div class="col-md-12">
+            <form action="/post/{{ post.id }}?_method=PUT" method="post">
+                {{ csrfField() }}
+                <div class="form-group">
+                        <label for="title"></label>
+                        <input value="{{ old('title', post.title) }}" type="text" class="form-control" name="title" placeholder="Your title">
+                        {{ elIf('<span class="text-danger">$self</span>', getErrorFor('title'), hasErrorFor('title')) }}
+                    </div>
+                     <div class="form-group">
+                        <label for="body"></label>
+                       
+                        <textarea class="form-control" name="body" id="body" cols="30" rows="10" placeholder="your body">{{ old('body', post.body) }}</textarea>
+                        {{ elIf('<span class="text-danger">$self</span>', getErrorFor('body'), hasErrorFor('body')) }}
+                    </div>
+        
+                    <button class="btn btn-danger btn-block" type="submit">Update</button>
+            </form>
+           
+        </div>
+    </div>
+
+@endsection
