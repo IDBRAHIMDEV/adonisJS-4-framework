@@ -10,6 +10,7 @@ This is the fullstack boilerplate for AdonisJs, it comes pre-configured with.
 6. Edge template engine
 7. Lucid ORM
 8. Migrations and seeds
+9. update this file
 
 ## Setup
 
